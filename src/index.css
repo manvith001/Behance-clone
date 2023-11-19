@@ -1,0 +1,77 @@
+/* The code you provided is CSS code. */
+/* The `@tailwind base`, `@tailwind components`, and `@tailwind utilities` directives are used in
+conjunction with the Tailwind CSS framework. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The `@import` rule is used to import an external CSS file into the current CSS file. In this case,
+the `@import` rule is used to import the Google Fonts CSS file for the "Poppins" font family. The
+URL specified in the `@import` rule points to the Google Fonts API, which serves the CSS file
+containing the font styles for the specified font family and variations. The `display=swap`
+parameter in the URL is used to optimize font loading by swapping the font display with the fallback
+font display after the font has finished loading. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* The `*` selector in CSS selects all elements on the page. The CSS properties inside the curly braces
+are then applied to all selected elements. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* The code you provided is a set of CSS rules that define styles for various elements and classes. */
+.active{
+  position: relative;
+  transition: 0.25s ease-in-out all;
+}
+.active:hover.active::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -20px;
+  left: 0;
+  position: absolute;
+}
+
+.bg-overlay{
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 23%);
+  transition: 0.25s linear all;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.category-item{
+  transition: 0.25s linear all;
+}
+
+.category-item:hover .bg-overlay {
+  visibility: visible;
+  transition: 0.25s linear all;
+}
+.category-item:hover .patch{
+  visibility: visible;
+  transition: 0.25s linear all;
+}
+.category-item:hover .save-file {
+  visibility: visible;
+  transition: 0.25s linear all;
+}
+
+.save-file,.patch{
+  visibility: hidden;
+}
+
+.header .menu {
+  transform: translateX(-100rem);
+}
+.header.menuopen .menu{
+  transform: translateX(0) ;
+
+}
